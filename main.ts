@@ -2,12 +2,14 @@
 import { buildDossier } from './vendor/makefun-game.ts';
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 fs.mkdirSync(out, { recursive: true });
-fs.cpSync(path.join(__dirname, 'game'), out, { recursive: true });
-fs.cpSync(path.join(__dirname, 'screenshots'), out, { recursive: true });
+fs.cpSync(path.join(__dirname, 'game'), path.join(out, 'game'), { recursive: true });
+fs.cpSync(path.join(__dirname, 'screenshots'), path.join(out, 'screenshots'), { recursive: true });
 
 const dossier = buildDossier(out, {
   text_max_bytes: 163840,
