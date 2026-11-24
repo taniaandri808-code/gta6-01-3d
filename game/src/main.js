@@ -2,17 +2,17 @@ import * as THREE from 'three';
 import { createWorld, worldColliders } from './world.js';
 import { buildCity } from './city.js';
 import { CFG } from './config.js';
-import { Player } from './systems/player.js';
-import { Vehicles } from './systems/vehicles.js';
-import { Traffic } from './systems/traffic.js';
-import { Police } from './systems/police.js';
-import { Combat } from './systems/combat.js';
-import { Missions } from './systems/missions.js';
-import { Hud } from './systems/hud.js';
-import { Minimap } from './systems/minimap.js';
-import { AudioSys } from './systems/audio.js';
-import { Save } from './systems/save.js';
-import { Ui } from './systems/ui.js';
+import { Player } from './player.js';
+import { Vehicles } from './vehicles.js';
+import { Traffic } from './traffic.js';
+import { Police } from './police.js';
+import { Combat } from './combat.js';
+import { Missions } from './missions.js';
+import { Hud } from './hud.js';
+import { Minimap } from './minimap.js';
+import { AudioSys } from './audio.js';
+import { Save } from './save.js';
+import { Ui } from './ui.js';
 
 // --- functions defined first to avoid TDZ, boot code runs at the bottom ---
 
