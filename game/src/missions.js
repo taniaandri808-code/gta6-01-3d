@@ -13,7 +13,7 @@ export class Missions {
         name: 'The Corvina Crown',
         district: 'Downtown',
         type: 'heist',
-        intro: 'The Crown Jewel of Corvina Bay sits in the Veldt Tower vault. Tonight, we make it ours.',
+        intro: 'Under the neon glow, the Crown Jewel of Corvina Bay sits in the Veldt Tower vault. Tonight, we make it ours.',
         reward: { cash: 50000, respect: 500, unlock: 'getaway_docks' },
         stages: [
           { type: 'goto', target: 'veldt_tower', label: 'Enter Veldt Tower', marker: { x: 1200, y: 800, radius: 5 } },
@@ -27,7 +27,7 @@ export class Missions {
         name: 'Harbor Run',
         district: 'Docks',
         type: 'getaway',
-        intro: 'The heat is on. The Docks are crawling with Corvina PD. Keep the wheels turning.',
+        intro: 'Salt and exhaust fill the air—the heat is on. The Docks are crawling with Corvina PD. Keep the wheels turning.',
         reward: { cash: 35000, respect: 400, unlock: 'convoy_industrial' },
         stages: [
           { type: 'goto', target: 'dock_warehouse', label: 'Reach the warehouse', marker: { x: 300, y: 2200, radius: 5 } },
@@ -41,7 +41,7 @@ export class Missions {
         name: 'Iron Horse',
         district: 'Industrial',
         type: 'convoy raid',
-        intro: 'A Vagner Group convoy moves through the Industrial sector. Heavy armor. Heavier payload.',
+        intro: 'Smoke rises from the smokestacks—a Vagner Group convoy moves through the Industrial sector. Heavy armor. Heavier payload.',
         reward: { cash: 45000, respect: 450, unlock: 'dock_deal_southside' },
         stages: [
           { type: 'goto', target: 'intercept_point', label: 'Intercept the convoy', marker: { x: 2500, y: 1500, radius: 8 } },
@@ -55,7 +55,7 @@ export class Missions {
         name: 'Salt & Steel',
         district: 'Southside',
         type: 'dock deal gone wrong',
-        intro: 'The meet at Pier 9 was supposed to be clean. The Marquez cartel disagreed.',
+        intro: 'Gulls circle above rust and ruin—the meet at Pier 9 was supposed to be clean. The Marquez cartel disagreed.',
         reward: { cash: 40000, respect: 420, unlock: 'race_highway' },
         stages: [
           { type: 'goto', target: 'pier_9', label: 'Reach Pier 9', marker: { x: 500, y: 2800, radius: 5 } },
@@ -70,7 +70,7 @@ export class Missions {
         name: 'Neon Sprint',
         district: 'Highway Loop',
         type: 'race',
-        intro: 'The Highway Loop at midnight. No lights. No law. Just you, the asphalt, and the competition.',
+        intro: 'City lights blur into streaks of color—the Highway Loop at midnight. No lights. No law. Just you, the asphalt, and the competition.',
         reward: { cash: 30000, respect: 350, unlock: 'protection_suburbs' },
         stages: [
           { type: 'goto', target: 'start_line', label: 'Reach the start line', marker: { x: 3500, y: 500, radius: 5 } },
@@ -85,7 +85,7 @@ export class Missions {
         name: 'Quiet Streets',
         district: 'Suburbs',
         type: 'protection',
-        intro: 'A witness in the Suburbs holds testimony that breaks the Vagner case. Keep them breathing.',
+        intro: 'Lawn mowers and silence hide deadly secrets—a witness in the Suburbs holds testimony that breaks the Vagner case. Keep them breathing.',
         reward: { cash: 38000, respect: 380, unlock: 'rooftop_uptown' },
         stages: [
           { type: 'goto', target: 'witness_house', label: 'Reach the witness', marker: { x: 1800, y: 300, radius: 5 } },
