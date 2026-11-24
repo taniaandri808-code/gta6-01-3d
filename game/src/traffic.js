@@ -1,5 +1,8 @@
 import * as THREE from 'three';
 
+import { CFG } from './config.js';
+
+
 const CAR_MATERIALS = [
   new THREE.MeshLambertMaterial({ color: 0xe05000 }),
   new THREE.MeshLambertMaterial({ color: 0x2050e0 }),
@@ -30,7 +33,6 @@ function makePed(scene) {
     new THREE.MeshLambertMaterial({ color: 0x20a0c0 })
   );
   scene.add(mesh);
-  colliders.push(mesh);
   return mesh;
 }
 
@@ -42,20 +44,6 @@ export class Traffic {
     this.peds = [];
     this.waypoints = [];
 
-    // Spawn AI cars on road lanes
-    const lanes = RoadGrid.getLanes();
-    for (let i = 0; i < lanes.length && this.cars.length < 40; i++) {
-      const lane = lanes[i];
-      const car = makeCar(scene, CAR_MATERIALS[i % CAR_MATERIALS.length]);
-      car.position.set(lane.start.x, 0.5, lane.start.z);
-      car.userData = {
-        lane: lane,
-        wp: 0,
-        speed: 8 + Math.random() * 6,
-        dir: lane.dir || 1,
-      };
-      this.cars.push(car);
-    }
 
     // Spawn ~80 pedestrians on sidewalks
     while (this.peds.length < 80) {

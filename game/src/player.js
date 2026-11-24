@@ -1,5 +1,8 @@
 import * as THREE from 'three';
 
+import { CFG } from './config.js';
+
+
 // Third-person humanoid player: capsule body + sphere head + arm/leg boxes
 export class Player {
   constructor(scene) {
